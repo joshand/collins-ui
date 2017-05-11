@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  {{#if (eq job.last_result 'Passed')}}
+    <button class="btn btn-success">Passed</button>
+  {{else if (eq job.last_result 'Failed')}}
+    <button class="btn btn-danger">Failed</button>
+  {{else}}
+    <button class="btn btn-default">Unknown</button>
+  {{/if}}
+</div>
+{{outlet}}

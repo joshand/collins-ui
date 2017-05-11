@@ -1,8 +1,10 @@
 <div class="container-fluid">
   {{#if (eq job.last_result 'Passed')}}
     <i class="pe-7s-check" style="font-size:32px; text-align: center; color:green;"></i>
-  {{else}}
+  {{else if (eq job.last_result 'Failed')}}
     <i class="pe-7s-attention" style="font-size:32px; text-align: center; color:red;"></i>
+  {{else}}
+    <i class="pe-7s-more" style="font-size:32px; text-align: center; color:gray;"></i>
   {{/if}}
 </div>
 {{outlet}}
